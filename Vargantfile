@@ -8,7 +8,7 @@
   config.vm.network "forwarded_port", guest: 5432, host: 5432
   config.vm.provision "shell", inline: <<-SHELL
     # download PostgreSQL 8.4
-    wget   https://old-releases.ubuntu.com/ubuntu/pool/universe/p/postgresql-8.4/postgresql-8.4_8.4.8-2_amd64.deb
+    wget --no-check-certificate  https://old-releases.ubuntu.com/ubuntu/pool/universe/p/postgresql-8.4/postgresql-8.4_8.4.8-2_amd64.deb
     # install PostgreSQL 8.4
     sudo dpkg -i postgresql-8.4_8.4.8-2_amd64.deb
 
